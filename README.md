@@ -27,7 +27,7 @@ Aim to provide a platform for students to register, validate their accounts, and
 - Redux
 
 ## Demo Link
-https://arjunn2313.github.io/ScopeIndia-UI-/
+https://arjunn2313.github.io/SCOPE-INDIA-Client/
 
 
 ## Installation
@@ -38,4 +38,4 @@ https://arjunn2313.github.io/ScopeIndia-UI-/
   -  Start the  server  `npm start`
   -  Open your browser and visit `http://localhost:3000` to see application in action and back-end on `http://localhost:6060`.
 
-## Screenshots
+ 
