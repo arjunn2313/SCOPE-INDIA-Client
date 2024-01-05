@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/SCOPE-INDIA-Client/static/css/main.d11673e4.css",
+    "main.js": "/SCOPE-INDIA-Client/static/js/main.5a021d59.js",
+    "static/js/787.8dc1d858.chunk.js": "/SCOPE-INDIA-Client/static/js/787.8dc1d858.chunk.js",
+    "index.html": "/SCOPE-INDIA-Client/index.html",
+    "main.d11673e4.css.map": "/SCOPE-INDIA-Client/static/css/main.d11673e4.css.map",
+    "main.5a021d59.js.map": "/SCOPE-INDIA-Client/static/js/main.5a021d59.js.map",
+    "787.8dc1d858.chunk.js.map": "/SCOPE-INDIA-Client/static/js/787.8dc1d858.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d11673e4.css",
+    "static/js/main.5a021d59.js"
+  ]
+}
