@@ -1,1 +1,1 @@
-export const api = "http://localhost:6060"
+export const api = "https://scope-india-server.vercel.app"
