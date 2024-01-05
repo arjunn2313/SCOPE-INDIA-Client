@@ -6,10 +6,12 @@ import Registartion from "./pages/registration/registartion";
 import Login from "./pages/login/login";
 import Dashboard from "./pages/dashboard/dashboard";
 import { useSelector } from "react-redux";
+import axios from "axios";
  
 
 function App() {
   const token = useSelector((state)=>state.student.credentials)
+ axios.defaults.withCredentials = true;
   return (
     <div>
       <Routes>
