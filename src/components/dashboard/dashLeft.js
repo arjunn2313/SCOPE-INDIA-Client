@@ -63,7 +63,7 @@ export default function DashLeft() {
           style={{ width: "100px", height: "100px" }}
         />
         <h4>
-          {user.firstName} {user.details.lastName}
+          {user.firstName} {user.lastName}
         </h4>
         <p>Student</p>
         <div className="dash-img-btn">
