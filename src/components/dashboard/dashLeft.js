@@ -4,8 +4,21 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 import { api } from "../../api";
 
-export default function DashLeft(user) {
+export default function DashLeft() {
   const token = useSelector((state) => state.student.credentials);
+  const [user,setUser] = useState({})
+
+    useEffect(()=>{
+    axios.get(`${api}/student/profile`,{
+      headers:{
+        Authorization : `Bearer ${token}` 
+      }
+    }).then((res)=>{
+      setUser(res.data.data)
+    }).catch((err)=>{
+      console.log(err)
+    })
+  },[])
 
   const handleUpload = async () => {
     const fileInput = document.createElement("input");
@@ -46,11 +59,11 @@ export default function DashLeft(user) {
     <div className="side-bar">
       <div className="sidebar-1">
         <img
-          src={`${api}${user.details.image}`}
+          src={`${api}${user.image}`}
           style={{ width: "100px", height: "100px" }}
         />
         <h4>
-          {user.details.firstName} {user.details.lastName}
+          {user.firstName} {user.details.lastName}
         </h4>
         <p>Student</p>
         <div className="dash-img-btn">
