@@ -1,12 +1,13 @@
 import axios from 'axios'
 import React, { useState, useEffect} from 'react'
+import { api } from '../../api'
 
 export default function DashHome(token) {
   // console.log(token)
   const[pickedCourse,setPickedCourse] = useState([])
 
   useEffect(()=>{
-      axios.get('http://localhost:6060/student/pickedcourse',{
+      axios.get(`${api}/student/pickedcourse`,{
         headers :{
         Authorization : `Bearer ${token.token}`
         }
@@ -28,7 +29,7 @@ export default function DashHome(token) {
           <div className="course-table" >
           <div className="course-con">
             <img
-              src={`http://localhost:6060${course.image}`}
+              src={`${api}${course.image}`}
               style={{ width: "100%", height: "100%" }}
             />
           </div>

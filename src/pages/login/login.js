@@ -5,6 +5,7 @@ import Navbar from "../../components/navbar/navbar";
 import { useDispatch } from 'react-redux';
 import { login } from '../../redux/reducer';
 import { useNavigate } from 'react-router-dom';
+import { api } from '../../api';
 
 
 export default function Login() {
@@ -36,7 +37,7 @@ const handleSubmit =(e)=>{
   if(Object.keys(error).length > 0){
     setErrors(error)
   }else{
-    axios.post("http://localhost:6060/student/login",loginDetails).then((res)=>{
+    axios.post(`${api}/student/login`,loginDetails).then((res)=>{
     console.log(res.data)
     dispatch(login(res.data.token))
     // setLoginDetails({
@@ -60,7 +61,7 @@ const forgotpass = () =>{
   if(Object.keys(error).length > 0){
     setErrors(error)
   }else{
-    axios.post("http://localhost:6060/student/forgotpassword",loginDetails).then((res)=>{
+    axios.post(`${api}/student/forgotpassword`,loginDetails).then((res)=>{
        setMessage('Please check your mail we have sent a login link with temporary password')
     }).catch((err)=>{
        console.log(err)

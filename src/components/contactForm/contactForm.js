@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./contactform.css";
 import axios from "axios";
+import { api } from "../../api";
+ 
 
 export default function ContactForm() {
 
@@ -59,7 +61,7 @@ const handleSubmit = async (e) =>{
         setErrors(error)
         setButton(false)
     }else{
-       axios.post('http://localhost:6060/enquiry',input).then((res)=>{
+       axios.post(`${api}/enquiry`,input).then((res)=>{
         setInput({
           fullName: "",
           email: "",

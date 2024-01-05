@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
 import { logout } from '../../redux/reducer'
+import { api } from '../../api'
 
 
 
@@ -21,7 +22,7 @@ export default function DashExplore() {
   const dispatch = useDispatch()
 
   useEffect(()=>{
-    axios.get('http://localhost:6060/student/profile',{
+    axios.get(`${api}/student/profile`,{
       headers:{
         Authorization : `Bearer ${token}` 
       }

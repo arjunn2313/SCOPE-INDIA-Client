@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 import { useSelector } from "react-redux";
+import { api } from "../../api";
 
 export default function DashCourses(props) {
   const [course, setCourse] = useState([]);
@@ -11,7 +12,7 @@ export default function DashCourses(props) {
   const courseid = props.details.courseid
   useEffect(() => {
     axios
-      .get("http://localhost:6060/course")
+      .get(`${api}/course`)
       .then((res) => {
         // console.log(res.data.result);
         setCourse(res.data.result);
@@ -30,7 +31,7 @@ const handleSignin = async (id) => {
     // Assuming 'token' is defined and has a 'token' property
     const authorizationHeader = `Bearer ${props.token}`;
 
-    const connect = await axios.post(`http://localhost:6060/student/pickedcourse/${id}`, {}, {
+    const connect = await axios.post(`${api}/student/pickedcourse/${id}`, {}, {
       headers: {
         Authorization: authorizationHeader,
       },
@@ -69,7 +70,7 @@ const handleSignin = async (id) => {
           <div className="course-table" key={course._id}>
             <div className="course-con">
               <img
-                src={`http://localhost:6060${course.image}`}
+                src={`${api}${course.image}`}
                 style={{ width: "100%", height: "100%" }}
               />
             </div>

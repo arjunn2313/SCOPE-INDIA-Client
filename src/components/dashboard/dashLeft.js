@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./dashboard.css";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import { api } from "../../api";
 
 export default function DashLeft(user) {
   const token = useSelector((state) => state.student.credentials);
@@ -23,7 +24,7 @@ export default function DashLeft(user) {
 
         try {
           const update = await axios.post(
-            "http://localhost:6060/student/updateimage",
+            `${api}/student/updateimage`,
             imageData,
             {
               headers: {
@@ -45,7 +46,7 @@ export default function DashLeft(user) {
     <div className="side-bar">
       <div className="sidebar-1">
         <img
-          src={`http://localhost:6060${user.details.image}`}
+          src={`${api}${user.details.image}`}
           style={{ width: "100px", height: "100px" }}
         />
         <h4>

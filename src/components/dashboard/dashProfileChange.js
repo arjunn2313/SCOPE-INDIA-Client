@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import { api } from "../../api";
 
 export default function ProfileUpdate(props) {
   const token = useSelector((state) => state.student.credentials);
@@ -11,7 +12,7 @@ export default function ProfileUpdate(props) {
   const handleSubmit = (e) =>{
         e.preventDefault()
 
-      axios.post('http://localhost:6060/student/updateprofile',user,{
+      axios.post(`${api}/student/updateprofile`,user,{
         headers:{
           Authorization:`Bearer ${token}`
         }

@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { country, state, cities } from "../../namedExports/coutry";
 import Footer from "../../components/footer/footer";
 import axios from "axios";
+import { api } from "../../api";
 
 export default function Registartion() {
   const navigate = useNavigate();
@@ -113,7 +114,7 @@ export default function Registartion() {
       formData.append("image", regInput.image);
 
       await axios
-        .post("http://localhost:6060/student", formData)
+        .post(`${api}/student`, formData)
         .then((res) => {
           console.log(res.data);
           error.message = res.data.message;
