@@ -4,7 +4,7 @@
   width: 20%;
   position: fixed;
 }
-
+ 
 .sidebar-1 {
   margin-top: 5%;
   display: flex;
@@ -87,6 +87,7 @@
   justify-content: space-around;
   text-align: center;
   border-radius: 20px;
+  height: fit-content;
 }
 
 .welcome-title {
@@ -95,7 +96,19 @@
   align-items: center;
   justify-content: center;
   color: #fff;
+  width: 30%;
 }
+
+.coll-student{
+  height:200px;
+  width:40%;
+}
+
+.scholar-img{
+   height:180px;
+    width:30%
+}
+            
 
 /* dash Home page */
 
@@ -157,7 +170,14 @@
   text-align: start;
 }
 /* RESET */
-
+.reset-containor{
+  width: 90%;
+  margin: auto;
+}
+.reset-input {
+  width: 60%;
+  margin: auto;
+}
 .reset-input label{
   font-weight: 400;
   font-size: 20px;
