@@ -55,12 +55,12 @@ export default function DashExplore() {
               <h6>Always stay updated in your student portal</h6>
             </div>
 
-            <div>
+               <div>
             <img src='assets\Scholarcap scroll.png' 
-            style={{height:'180px',width:'250px'}}
+            className='scholar-img'
             />
               <img src='assets\5. College Student.png' 
-            style={{height:'200px',width:'274px'}}
+              className='coll-student'
             />
             </div>
 
