@@ -59,9 +59,9 @@ export default function PassReset(token) {
     
   }
   return (
-    <div className='dash-home'>
+  <div className='dash-home'>
         <h5>CHANGE PASSWORD</h5>
-        <div style={{width:'50%',margin:'auto'}}>
+        <div className='reset-containor'>
 
           <form onSubmit={handleSubmit}>
             <div className='reset-input'>
