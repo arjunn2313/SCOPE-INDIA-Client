@@ -3,6 +3,7 @@ import './dashboard.css'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { logout } from '../../redux/reducer'
+import { api } from "../../api";
  
 export default function PassReset(token) {
   const[input,setInput] = useState({
@@ -38,7 +39,7 @@ export default function PassReset(token) {
     if(Object.keys(error).length > 0){
       setErrors(error)
     }else{
-      axios.post('http://localhost:6060/student/updatepassword',input,{
+      axios.post(`${api}/student/updatepassword`,input,{
         headers:{
           Authorization:`Bearer ${token.token}`
         }
