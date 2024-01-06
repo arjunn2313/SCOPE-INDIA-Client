@@ -4,6 +4,7 @@ import "./dashboard.css";
 import DashExplore from "../../components/dashboard/daashExplore";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import { api } from '../../api';
 
 export default function Dashboard() {
   const token = useSelector((state) => state.student.credentials);
@@ -12,7 +13,7 @@ export default function Dashboard() {
   // console.log(user)
   useEffect(() => {
     axios
-      .get("http://localhost:6060/student/profile", {
+      .get(`${api}/student/profile`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
