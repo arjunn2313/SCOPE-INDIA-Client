@@ -12,17 +12,6 @@ export default function Navbar() {
   const token = useSelector((state)=>state.student.credentials)
  console.log(token)
 
- useEffect(()=>{
-  axios.get("http://localhost:6060/student/profile",{
-    headers:{
-      Authorization:`Bearer ${token}`
-    }
-  }).then((res)=>{
-    setUser(res.data.data)
-  }).catch((err)=>{
-    console.log(err)
-  })
- },[token])
   return (
     <div className={location.pathname =='/login'? 'lognav' : "navbar"}>
         <span>Scope India
