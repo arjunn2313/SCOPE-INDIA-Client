@@ -25,11 +25,11 @@ export default function Dashboard() {
   }, [token]);
 
   return (
-    <div className="dashboard">
-      <div style={{ width: "20%" }}>
+     <div className="dashboard">
+      <div className="dash-sidebar">
         <DashLeft details={user} />
       </div>
-      <div style={{ width: "80%" }}>
+      <div className="dash-featured">
         <DashExplore details={user} />
       </div>
     </div>
