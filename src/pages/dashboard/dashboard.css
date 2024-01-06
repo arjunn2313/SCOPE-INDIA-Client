@@ -1,6 +1,87 @@
 .dashboard{
     display: flex;
-    /* justify-content:space-between; */
    width: 100%;
 
+}
+
+.dash-sidebar{
+    width: 20%;
+}
+
+.dash-featured{
+    width: 80%;
+}
+
+
+@media(max-width : 905px){
+    .dash-sidebar{
+        display: none;
+    }
+    .dash-featured{
+        width: 100%;
+    }
+    .reset-input label{
+        font-size: 18px;
+    }
+    .welcome-title h3{
+        font-size: 25px ;
+    }
+}
+
+@media(max-width : 765px){
+    .scholar-img{
+        display: none;
+    }
+    .welcome-title {
+        width: 50%;
+    }
+    .coll-student{
+        width: 50%;
+        height:150px;
+      }
+      .welcome-title h3{
+        font-size: 20px ;
+    }
+    .welcome-title h6{
+        font-size: 18px ;
+    }
+    .dash-nav ul {
+        font-size: 12px;
+    }
+    .course-table{
+         flex-direction: column;
+    }
+    .course-con{
+        width: 100%;
+    }
+}
+
+@media(max-width : 565px){
+    .coll-student{
+        height:100px;
+      }
+      .welcome-title h3{
+        font-size: 16px ;
+    }
+    .welcome-title h6{
+        font-size: 12px ;
+    }
+    .dash-nav ul {
+        font-size: 8px;
+    }
+    .dash-home h5{
+        font-size: 16px;
+        font-weight: 300;    
+      }
+      .reset-input label{
+        font-size: 12px;
+    }
+    .reset-input {
+        width: 90%;     
+      }
+      .reset-input input{ 
+       padding:1%;
+        margin-bottom: 1%;
+        height: 4vh;
+      }
 }
